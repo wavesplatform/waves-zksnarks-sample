@@ -1,0 +1,29 @@
+{
+  "name": "waves-zksnarks-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run zkcompile && npm run zksetup && node scripts/testAll.js",
+    "zkcompile": "node node_modules/circom/cli.js circuits/Test.circom -o build/Test_compiled.json",
+    "zksetup": "node node_modules/snarkjs/cli.js setup --protocol groth --pk \"build/Test_pk.json\" --vk \"build/Test_vk.json\" --circuit \"build/Test_compiled.json\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snjax/waves-zksnarks-sample.git"
+  },
+  "author": "Igor Gulamov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snjax/waves-zksnarks-sample/issues"
+  },
+  "homepage": "https://github.com/snjax/waves-zksnarks-sample#readme",
+  "dependencies": {
+    "@waves/waves-crypto": "^3.0.17",
+    "@waves/waves-transactions": "^3.12.1",
+    "circom": "0.0.30",
+    "dotenv": "^6.2.0",
+    "node-fetch": "^2.6.0",
+    "snarkjs": "^0.1.14"
+  }
+}
