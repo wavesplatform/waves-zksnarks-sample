@@ -23,7 +23,7 @@
     "@waves/waves-transactions": "^3.12.1",
     "circom": "0.0.30",
     "dotenv": "^6.2.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "snarkjs": "^0.1.14"
   }
 }
